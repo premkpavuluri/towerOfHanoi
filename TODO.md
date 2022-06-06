@@ -2,11 +2,6 @@
 
 - **TODO:**
 
-  - [ ] create src/ and test/
-  - [ ] Implement `disc` class
-  - [ ] Methods in `disc`
-    - [ ] isGreater
-    - [ ] equals
   - [ ] Implement `tower` class
   - [ ] Methods in `tower`
     - [ ] pop
@@ -24,5 +19,10 @@
 
 
 - **DONE:**
+  - [x] create src/ and test/
+  - [x] Implement `disc` class
+  - [x] Methods in `disc`
+    - [x] isGreater
+    - [x] equals
   - [x] Get eslintrc with required config
 
