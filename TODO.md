@@ -7,7 +7,7 @@
     - [ ] pop
     - [ ] push
     - [ ] isInsertionValid
-    - [ ] equals
+    - [x] equals
   - [ ] Pass `disc`s to `tower`
   - [ ] Implement `game` class
   - [ ] Methods in `game`
