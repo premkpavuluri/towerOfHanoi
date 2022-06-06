@@ -2,13 +2,6 @@
 
 - **TODO:**
   - [ ] Implement `tower` class
-  - [ ] Methods in `tower`
-    - [x] pop
-    - [x] getTopDisc
-    - [x] isEmpty
-    - [ ] push
-    - [x] ~~canPush~~
-    - [x] equals
   - [ ] Pass `disc`s to `tower`
   - [ ] Implement `game` class
   - [ ] Methods in `game`
@@ -20,6 +13,13 @@
 
 
 - **DONE:**
+  - [x] Methods in `tower`
+    - [x] pop
+    - [x] getTopDisc
+    - [x] isEmpty
+    - [x] push
+    - [x] ~~canPush~~
+    - [x] equals
   - [x] isGreaterThan contract in `disc`
     - [x] instead taking size, make it to take disc
   - [x] Implement `disc` class

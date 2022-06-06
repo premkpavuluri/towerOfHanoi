@@ -35,4 +35,12 @@ describe('Tower', () => {
 
     assert.equal(actual, expected);
   });
+
+  it('Should push the disc into the tower stack', () => {
+    const tower = new Tower(1);
+    tower.push(2);
+    const expected = new Tower(1, 2);
+
+    assert.ok(tower.equals(expected));
+  });
 });

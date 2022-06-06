@@ -15,6 +15,10 @@ class Tower {
     return this.#discs.pop();
   }
 
+  push(disc) {
+    this.#discs.push(disc);
+  }
+
   topDisc() {
     const discCount = this.#discs.length;
     return this.#discs[discCount - 1];
