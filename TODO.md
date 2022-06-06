@@ -1,12 +1,15 @@
 # Tower of Hanoi
 
 - **TODO:**
-
+  - [ ] isGreaterThan contract in `disc`
+    - [ ] instead taking size, make it to take disc
   - [ ] Implement `tower` class
   - [ ] Methods in `tower`
-    - [ ] pop
+    - [x] pop
+    - [ ] getTopDisc
+    - [x] isEmpty
     - [ ] push
-    - [ ] isInsertionValid
+    - [ ] canPush
     - [x] equals
   - [ ] Pass `disc`s to `tower`
   - [ ] Implement `game` class

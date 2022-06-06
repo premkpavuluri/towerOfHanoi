@@ -7,6 +7,14 @@ class Tower {
     this.#discs = discs;
   }
 
+  isEmpty() {
+    return this.#discs.length === 0;
+  }
+
+  pop() {
+    return this.#discs.pop();
+  }
+
   equals(otherTower) {
     try {
       assert.deepStrictEqual(otherTower.#discs, this.#discs);
