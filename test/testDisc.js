@@ -11,8 +11,10 @@ describe('Disc', () => {
 
   it('Should return true if disc size is greater', () => {
     const disc1 = new Disc(2);
+    const bigDisc = new Disc(3);
+    const smallDisc = new Disc(1);
 
-    assert.equal(disc1.isGreaterThan(3), false);
-    assert.equal(disc1.isGreaterThan(1), true);
+    assert.equal(disc1.isGreaterThan(bigDisc), false);
+    assert.equal(disc1.isGreaterThan(smallDisc), true);
   });
 });

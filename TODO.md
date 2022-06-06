@@ -1,8 +1,6 @@
 # Tower of Hanoi
 
 - **TODO:**
-  - [ ] isGreaterThan contract in `disc`
-    - [ ] instead taking size, make it to take disc
   - [ ] Implement `tower` class
   - [ ] Methods in `tower`
     - [x] pop
@@ -22,6 +20,8 @@
 
 
 - **DONE:**
+  - [x] isGreaterThan contract in `disc`
+    - [x] instead taking size, make it to take disc
   - [x] create src/ and test/
   - [x] Implement `disc` class
   - [x] Methods in `disc`

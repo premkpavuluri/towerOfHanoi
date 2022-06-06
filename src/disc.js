@@ -5,8 +5,8 @@ class Disc {
     this.#size = size;
   }
 
-  isGreaterThan(givenSize) {
-    return this.#size > givenSize;
+  isGreaterThan(otherDisc) {
+    return this.#size > otherDisc.#size;
   }
 
   equals(otherDisc) {
