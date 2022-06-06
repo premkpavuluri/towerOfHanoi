@@ -4,10 +4,10 @@
   - [ ] Implement `tower` class
   - [ ] Methods in `tower`
     - [x] pop
-    - [ ] getTopDisc
+    - [x] getTopDisc
     - [x] isEmpty
     - [ ] push
-    - [ ] canPush
+    - [x] ~~canPush~~
     - [x] equals
   - [ ] Pass `disc`s to `tower`
   - [ ] Implement `game` class
@@ -22,10 +22,10 @@
 - **DONE:**
   - [x] isGreaterThan contract in `disc`
     - [x] instead taking size, make it to take disc
-  - [x] create src/ and test/
   - [x] Implement `disc` class
   - [x] Methods in `disc`
     - [x] isGreater
     - [x] equals
+  - [x] create src/ and test/
   - [x] Get eslintrc with required config
 

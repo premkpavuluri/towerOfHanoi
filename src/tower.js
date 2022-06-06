@@ -15,6 +15,11 @@ class Tower {
     return this.#discs.pop();
   }
 
+  topDisc() {
+    const discCount = this.#discs.length;
+    return this.#discs[discCount - 1];
+  }
+
   equals(otherTower) {
     try {
       assert.deepStrictEqual(otherTower.#discs, this.#discs);

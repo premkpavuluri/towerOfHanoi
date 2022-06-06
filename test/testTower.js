@@ -27,4 +27,12 @@ describe('Tower', () => {
     assert.equal(tower1.isEmpty(), true);
     assert.equal(tower2.isEmpty(), false);
   });
+
+  it('Should return top disc of a tower', () => {
+    const tower = new Tower(1, 2);
+    const actual = tower.topDisc();
+    const expected = 2;
+
+    assert.equal(actual, expected);
+  });
 });
