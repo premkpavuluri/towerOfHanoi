@@ -1,18 +1,22 @@
 # Tower of Hanoi
 
 - **TODO:**
-  - [ ] Implement `tower` class
-  - [ ] Pass `disc`s to `tower`
+
+  - [ ] Add tower number in `tower` class
   - [ ] Implement `game` class
   - [ ] Methods in `game`
     - [ ] move
-    - [ ] areMovesValid
+    - [x] areMovesValid
     - [ ] isGameEnded
+  - [ ] Implement main
+  - [ ] Connect main to stdin
 
 - **MAYBE:**
 
 
 - **DONE:**
+  - [x] Pass `disc`s to `tower`
+  - [x] Implement `tower` class
   - [x] Methods in `tower`
     - [x] pop
     - [x] getTopDisc
