@@ -38,4 +38,16 @@ describe('Game', () => {
 
     assert.ok(game.isGameEnded());
   });
+
+  it('Should move the disc from source tower to destination tower', () => {
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower1 = new Tower(disc1);
+    const tower2 = new Tower(disc2);
+    const game = new Game(tower1, tower2);
+    game.move(1, 2);
+
+    const expectedTower = new Tower(disc2, disc1);
+    assert.ok(tower2.equals(expectedTower));
+  });
 });
