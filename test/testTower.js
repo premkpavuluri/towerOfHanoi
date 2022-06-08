@@ -43,4 +43,10 @@ describe('Tower', () => {
 
     assert.ok(tower.equals(expected));
   });
+
+  it('Should return the disc count of tower', () => {
+    const tower = new Tower(1);
+
+    assert.equal(tower.discCount(), 1);
+  });
 });

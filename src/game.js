@@ -5,6 +5,11 @@ class Game {
     this.#towers = towers;
   }
 
+  isGameEnded() {
+    const lastTower = this.#towers[2];
+    return lastTower.discCount() === 3;
+  }
+
   areMovesValid(fromTower, toTower) {
     const sourceTower = this.#towers[fromTower - 1];
     const destinationTower = this.#towers[toTower - 1];

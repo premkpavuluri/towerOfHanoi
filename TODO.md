@@ -7,7 +7,7 @@
   - [ ] Methods in `game`
     - [ ] move
     - [x] areMovesValid
-    - [ ] isGameEnded
+    - [x] isGameEnded
   - [ ] Implement main
   - [ ] Connect main to stdin
 
@@ -15,6 +15,7 @@
 
 
 - **DONE:**
+  - [x] Add `getDiscCount` in tower class
   - [x] Pass `disc`s to `tower`
   - [x] Implement `tower` class
   - [x] Methods in `tower`
