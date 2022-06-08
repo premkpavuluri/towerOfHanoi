@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 class Tower {
   #discs;
 
@@ -29,13 +27,13 @@ class Tower {
   }
 
   equals(otherTower) {
-    try {
-      assert.deepStrictEqual(otherTower.#discs, this.#discs);
-    } catch (error) {
+    if (!(otherTower instanceof Tower)) {
       return false;
     }
 
-    return otherTower instanceof Tower;
+    return this.#discs.every((disc, index) => {
+      return disc.equals(otherTower.#discs[index]);
+    });
   }
 }
 

@@ -10,12 +10,7 @@ class Disc {
   }
 
   equals(otherDisc) {
-    const isStateEqual = this.#size === otherDisc.#size;
-    if (isStateEqual && otherDisc instanceof Disc) {
-      return true;
-    }
-
-    return false;
+    return otherDisc instanceof Disc && this.#size === otherDisc.#size;
   }
 }
 

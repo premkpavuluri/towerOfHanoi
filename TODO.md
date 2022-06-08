@@ -4,10 +4,6 @@
 
   - [ ] Add tower number in `tower` class
   - [ ] Implement `game` class
-  - [ ] Methods in `game`
-    - [ ] move
-    - [x] areMovesValid
-    - [x] isGameEnded
   - [ ] Implement main
   - [ ] Connect main to stdin
 
@@ -15,6 +11,11 @@
 
 
 - **DONE:**
+  - [x] use disc.equals in tower.equals
+  - [x] Methods in `game`
+    - [x] move
+    - [x] areMovesValid
+    - [x] isGameEnded
   - [x] Add `getDiscCount` in tower class
   - [x] Pass `disc`s to `tower`
   - [x] Implement `tower` class

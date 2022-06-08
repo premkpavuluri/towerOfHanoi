@@ -1,23 +1,26 @@
 const assert = require('assert');
 const { Tower } = require('../src/tower.js');
+const { Disc } = require('../src/disc.js');
 
 describe('Tower', () => {
   it('Should validate the state and instance of other tower', () => {
-    const tower1 = new Tower(1, 2);
-    const tower2 = new Tower(1, 2);
-    const tower3 = new Tower(1);
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower1 = new Tower(disc1, disc2);
+    const tower2 = new Tower(disc1, disc2);
+    const tower3 = new Tower(disc1);
 
     assert.ok(tower1.equals(tower2));
     assert.ok(!tower1.equals(tower3));
   });
 
   it('Should pop the top disc from the tower', () => {
-    const tower = new Tower(1, 2);
-    const expectedTower = new Tower(1);
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower = new Tower(disc2, disc1);
     const popedDisc = tower.pop();
 
-    assert.ok(tower.equals(expectedTower));
-    assert.equal(popedDisc, 2);
+    assert.ok(popedDisc.equals(disc1));
   });
 
   it('Should return true if tower is empty', () => {
@@ -37,9 +40,11 @@ describe('Tower', () => {
   });
 
   it('Should push the disc into the tower stack', () => {
-    const tower = new Tower(1);
-    tower.push(2);
-    const expected = new Tower(1, 2);
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower = new Tower(disc2);
+    tower.push(disc1);
+    const expected = new Tower(disc2, disc1);
 
     assert.ok(tower.equals(expected));
   });
