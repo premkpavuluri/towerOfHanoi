@@ -97,7 +97,8 @@
   "overrides": [
     {
       "files": [
-        "test*.js"
+        "test*.js",
+        "play.js"
       ],
       "rules": {
         "max-len": "warn",

@@ -3,7 +3,6 @@
 - **TODO:**
 
   - [ ] Add tower number in `tower` class
-  - [ ] Implement `game` class
   - [ ] Implement main
   - [ ] Connect main to stdin
 
@@ -12,6 +11,7 @@
 
 - **DONE:**
   - [x] use disc.equals in tower.equals
+  - [x] Implement `game` class
   - [x] Methods in `game`
     - [x] move
     - [x] areMovesValid
