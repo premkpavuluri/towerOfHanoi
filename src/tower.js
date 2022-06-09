@@ -8,7 +8,7 @@ class Tower {
   }
 
   isEmpty() {
-    return this.#discs.length === 0;
+    return this.discCount() === 0;
   }
 
   pop() {
@@ -20,7 +20,7 @@ class Tower {
   }
 
   topDisc() {
-    const discCount = this.#discs.length;
+    const discCount = this.discCount();
     return this.#discs[discCount - 1];
   }
 
