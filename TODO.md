@@ -3,7 +3,7 @@
 - **TODO:**
 
   - [ ] make `game` to give towers info 
-    - [ ] make `tower` to give disc info
+    - [x] make `tower` to give disc info
   - [ ] Implement main
     - [ ] Take input from user
     - [ ] show the status of towers at every stage

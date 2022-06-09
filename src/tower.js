@@ -32,6 +32,10 @@ class Tower {
     return this.#number;
   }
 
+  getDiscs() {
+    return this.#discs.map(disc => disc.getSize());
+  }
+
   equals(otherTower) {
     if (!(otherTower instanceof Tower && this.#number === otherTower.#number)) {
       return false;

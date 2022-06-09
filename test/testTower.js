@@ -61,4 +61,14 @@ describe('Tower', () => {
 
     assert.equal(actual, 1);
   });
+
+  it('Should return the disc info', () => {
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower = new Tower(1, disc2, disc1);
+
+    const actual = tower.getDiscs();
+
+    assert.deepStrictEqual(actual, [2, 1]);
+  });
 });
