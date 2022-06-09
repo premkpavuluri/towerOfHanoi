@@ -9,13 +9,21 @@ describe('Game', () => {
     const disc2 = new Disc(2);
     const tower1 = new Tower(1, disc1);
     const tower2 = new Tower(2, disc2);
-    const tower3 = new Tower(3);
-    const game = new Game(tower1, tower2, tower3);
+    const game = new Game(tower1, tower2);
 
-    const validPositions = game.areMovesValid(1, 2);
-    const invalidPositions = game.areMovesValid(2, 1);
-    assert.equal(validPositions, true);
+    const invalidPositions = game.move(2, 1);
     assert.equal(invalidPositions, false);
+  });
+
+  it('Should not move the disc if moves are invalid', () => {
+    const disc1 = new Disc(1);
+    const disc2 = new Disc(2);
+    const tower1 = new Tower(1, disc1);
+    const tower2 = new Tower(2, disc2);
+    const game = new Game(tower1, tower2);
+
+    const actual = game.move(2, 1);
+    assert.equal(actual, false);
   });
 
   it('Should return false when source is tower is empty', () => {
@@ -23,7 +31,7 @@ describe('Game', () => {
     const tower2 = new Tower(2);
     const game = new Game(tower1, tower2);
 
-    const actual = game.areMovesValid(1, 2);
+    const actual = game.move(1, 2);
     assert.equal(actual, false);
   });
 

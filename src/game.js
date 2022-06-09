@@ -10,8 +10,13 @@ class Game {
   }
 
   move(sourceTower, destinationTower) {
+    if (!this.#areMovesValid(sourceTower, destinationTower)) {
+      return false;
+    }
+
     const disctToBeMoved = this.#getTower(sourceTower).pop();
     this.#getTower(destinationTower).push(disctToBeMoved);
+    return true;
   }
 
   isGameEnded() {
@@ -19,12 +24,11 @@ class Game {
     return lastTower.discCount() === 3;
   }
 
-  displayTowers() {
-    const towersInfo = this.#towers.map(tower => tower.getDiscs());
-    console.log(towersInfo);
+  getTowers() {
+    return this.#towers.map(tower => tower.getDiscs());
   }
 
-  areMovesValid(fromTower, toTower) {
+  #areMovesValid(fromTower, toTower) {
     const sourceTower = this.#getTower(fromTower);
     const destinationTower = this.#getTower(toTower);
     if (sourceTower.isEmpty()) {
