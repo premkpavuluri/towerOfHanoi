@@ -1,0 +1,21 @@
+{
+  "name": "towerofhanoi",
+  "version": "1.0.0",
+  "description": "A commandline puzzle",
+  "main": "play.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node play.js"
+  },
+  "author": "Prem",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "eslint": "^8.17.0"
+  }
+}
