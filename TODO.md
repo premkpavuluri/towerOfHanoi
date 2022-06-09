@@ -13,6 +13,7 @@
 
 
 - **DONE:**
+  - [x] Make disc to give it's size
   - [x] Add tower number in `tower` class
   - [x] use disc.equals in tower.equals
   - [x] Implement `game` class

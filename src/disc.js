@@ -9,6 +9,10 @@ class Disc {
     return this.#size > otherDisc.#size;
   }
 
+  getSize() {
+    return this.#size;
+  }
+
   equals(otherDisc) {
     return otherDisc instanceof Disc && this.#size === otherDisc.#size;
   }
