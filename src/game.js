@@ -5,19 +5,23 @@ class Game {
     this.#towers = towers;
   }
 
+  #getTower(number) {
+    return this.#towers.find(tower => number === tower.getTowerNumber());
+  }
+
   move(sourceTower, destinationTower) {
-    const disctToBeMoved = this.#towers[sourceTower - 1].pop();
-    this.#towers[destinationTower - 1].push(disctToBeMoved);
+    const disctToBeMoved = this.#getTower(sourceTower).pop();
+    this.#getTower(destinationTower).push(disctToBeMoved);
   }
 
   isGameEnded() {
-    const lastTower = this.#towers[2];
+    const lastTower = this.#getTower(3);
     return lastTower.discCount() === 3;
   }
 
   areMovesValid(fromTower, toTower) {
-    const sourceTower = this.#towers[fromTower - 1];
-    const destinationTower = this.#towers[toTower - 1];
+    const sourceTower = this.#getTower(fromTower);
+    const destinationTower = this.#getTower(toTower);
     if (sourceTower.isEmpty()) {
       return false;
     }
