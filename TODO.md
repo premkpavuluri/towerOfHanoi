@@ -2,14 +2,18 @@
 
 - **TODO:**
 
-  - [ ] Add tower number in `tower` class
+  - [ ] make `game` to give towers info 
+    - [ ] make `tower` to give disc info
   - [ ] Implement main
+    - [ ] Take input from user
+    - [ ] show the status of towers at every stage
   - [ ] Connect main to stdin
 
 - **MAYBE:**
 
 
 - **DONE:**
+  - [x] Add tower number in `tower` class
   - [x] use disc.equals in tower.equals
   - [x] Implement `game` class
   - [x] Methods in `game`

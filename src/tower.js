@@ -1,7 +1,9 @@
 class Tower {
   #discs;
+  #number;
 
-  constructor(...discs) {
+  constructor(number, ...discs) {
+    this.#number = number;
     this.#discs = discs;
   }
 
@@ -26,8 +28,12 @@ class Tower {
     return this.#discs.length;
   }
 
+  getTowerNumber() {
+    return this.#number;
+  }
+
   equals(otherTower) {
-    if (!(otherTower instanceof Tower)) {
+    if (!(otherTower instanceof Tower && this.#number === otherTower.#number)) {
       return false;
     }
 

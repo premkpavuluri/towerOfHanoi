@@ -7,9 +7,9 @@ describe('Game', () => {
   it('Should validate the given moves', () => {
     const disc1 = new Disc(1);
     const disc2 = new Disc(2);
-    const tower1 = new Tower(disc1);
-    const tower2 = new Tower(disc2);
-    const tower3 = new Tower();
+    const tower1 = new Tower(1, disc1);
+    const tower2 = new Tower(2, disc2);
+    const tower3 = new Tower(3);
     const game = new Game(tower1, tower2, tower3);
 
     const validPositions = game.areMovesValid(1, 2);
@@ -19,8 +19,8 @@ describe('Game', () => {
   });
 
   it('Should return false when source is tower is empty', () => {
-    const tower1 = new Tower();
-    const tower2 = new Tower();
+    const tower1 = new Tower(1);
+    const tower2 = new Tower(2);
     const game = new Game(tower1, tower2);
 
     const actual = game.areMovesValid(1, 2);
@@ -31,9 +31,9 @@ describe('Game', () => {
     const disc1 = new Disc(1);
     const disc2 = new Disc(2);
     const disc3 = new Disc(3);
-    const tower1 = new Tower();
-    const tower2 = new Tower();
-    const tower3 = new Tower(disc3, disc2, disc1);
+    const tower1 = new Tower(1);
+    const tower2 = new Tower(2);
+    const tower3 = new Tower(3, disc3, disc2, disc1);
     const game = new Game(tower1, tower2, tower3);
 
     assert.ok(game.isGameEnded());
@@ -42,12 +42,12 @@ describe('Game', () => {
   it('Should move the disc from source tower to destination tower', () => {
     const disc1 = new Disc(1);
     const disc2 = new Disc(2);
-    const tower1 = new Tower(disc1);
-    const tower2 = new Tower(disc2);
+    const tower1 = new Tower(1, disc1);
+    const tower2 = new Tower(2, disc2);
     const game = new Game(tower1, tower2);
     game.move(1, 2);
 
-    const expectedTower = new Tower(disc2, disc1);
+    const expectedTower = new Tower(2, disc2, disc1);
     assert.ok(tower2.equals(expectedTower));
   });
 });
