@@ -16,6 +16,12 @@ const main = () => {
   process.stdin.on('data', (moves) => {
     const [from, to] = moves.split(' ').map(digit => parseInt(digit));
 
+    if (!game.areMovesValid(from, to)) {
+      console.log('Invalid move');
+      game.displayTowers();
+      return;
+    }
+
     game.move(from, to);
     game.displayTowers();
 
