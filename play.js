@@ -1,6 +1,7 @@
 const { Game } = require('./src/game.js');
 const { Tower } = require('./src/tower.js');
 const { Disc } = require('./src/disc.js');
+process.stdin.setEncoding('utf8');
 
 const main = () => {
   const disc1 = new Disc(1);
@@ -11,15 +12,18 @@ const main = () => {
   const tower3 = new Tower(3);
   const game = new Game(tower1, tower2, tower3);
 
-  //moves
-  game.move(1, 2);
-  game.move(1, 3);
-  game.move(3, 2);
-  game.move(1, 3);
-  game.move(2, 1);
-  game.move(2, 3);
-  game.move(1, 3);
-  console.log(game.isGameEnded() ? 'Game over' : 'Continue');
+  game.displayTowers();
+  process.stdin.on('data', (moves) => {
+    const [from, to] = moves.split(' ').map(digit => parseInt(digit));
+
+    game.move(from, to);
+    game.displayTowers();
+
+    if (game.isGameEnded()) {
+      console.log('Congratulations!');
+      process.exit();
+    }
+  });
 };
 
 main();

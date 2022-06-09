@@ -19,6 +19,11 @@ class Game {
     return lastTower.discCount() === 3;
   }
 
+  displayTowers() {
+    const towersInfo = this.#towers.map(tower => tower.getDiscs());
+    console.log(towersInfo);
+  }
+
   areMovesValid(fromTower, toTower) {
     const sourceTower = this.#getTower(fromTower);
     const destinationTower = this.#getTower(toTower);
